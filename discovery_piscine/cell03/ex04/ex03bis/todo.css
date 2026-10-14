@@ -1,0 +1,81 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 16px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e6efe7, #f7f5ee);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #304c38;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #527c61;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #3e624b;
+}
+
+#newTask {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.task {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #e8f0e8;
+    border-radius: 7px;
+    color: #304c38;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.task:hover {
+    background-color: #d8e7d9;
+}
+
+.confirmation-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confirmation-dialog {
+    width: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.confirmation-dialog button {
+    margin: 5px;
+}
+
+.confirmation-dialog .noButton {
+    background-color: #777;
+}
