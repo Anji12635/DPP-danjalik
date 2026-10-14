@@ -1,0 +1,104 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    background-image: linear-gradient(
+        rgba(20, 30, 25, 0.35),
+        rgba(20, 30, 25, 0.35)
+    ), url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.90);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #315747;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+#newTask {
+    background-color: #477a61;
+    color: white;
+    border: none;
+    padding: 13px 35px;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+#newTask:hover {
+    background-color: #315747;
+}
+
+#ft_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task {
+    background: white;
+    color: #333;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 5px solid #78a88c;
+    text-align: left;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    background-color: #f0f8f2;
+}
+
+.confirmation-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.confirmation-dialog {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.confirmation-dialog button {
+    margin: 10px 5px 0;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #477a61;
+    color: white;
+    cursor: pointer;
+}
+
+.confirmation-dialog button:hover {
+    background: #315747;
+}
