@@ -1,59 +1,65 @@
 
-const form = document.getElementById("calcForm");
-const leftInput = document.getElementById("left");
-const rightInput = document.getElementById("right");
-const operator = document.getElementById("operator");
+$(document).ready(function () {
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    $("#calculate").on("click", function () {
+        // Read the input values using jQuery
+        const leftText = $("#leftNumber").val().trim();
+        const rightText = $("#rightNumber").val().trim();
+        const operator = $("#operator").val();
 
-    const leftText = leftInput.value.trim();
-    const rightText = rightInput.value.trim();
+        // Only accept non-negative integers
+        if (!/^\d+$/.test(leftText) || !/^\d+$/.test(rightText)) {
+            alert("Error :(");
+            return;
+        }
 
-    // Check that both inputs contain only non-negative integers.
-    if (
-        leftText === "" ||
-        rightText === "" ||
-        !/^\d+$/.test(leftText) ||
-        !/^\d+$/.test(rightText)
-    ) {
-        alert("Error :(");
-        return;
-    }
+        const left = Number(leftText);
+        const right = Number(rightText);
 
-    const left = Number(leftText);
-    const right = Number(rightText);
-    let result;
+        // Check division or modulo by zero
+        if ((operator === "/" || operator === "%") && right === 0) {
+            alert("It's over 9000!");
+            return;
+        }
 
-    // Division and modulo by zero are not allowed.
-    if ((operator.value === "/" || operator.value === "%") && right === 0) {
-        alert("It's over 9000!");
-        return;
-    }
+        let result;
 
-    switch (operator.value) {
-        case "+":
-            result = left + right;
-            break;
-        case "-":
-            result = left - right;
-            break;
-        case "*":
-            result = left * right;
-            break;
-        case "/":
-            result = left / right;
-            break;
-        case "%":
-            result = left % right;
-            break;
-    }
+        // Perform the selected operation
+        switch (operator) {
+            case "+":
+                result = left + right;
+                break;
 
-    alert(result);
-    console.log(result);
+            case "-":
+                result = left - right;
+                break;
+
+            case "*":
+                result = left * right;
+                break;
+
+            case "/":
+                result = left / right;
+                break;
+
+            case "%":
+                result = left % right;
+                break;
+
+            default:
+                alert("Error :(");
+                return;
+        }
+
+        // Display the result
+        alert(result);
+        console.log(result);
+    });
+
+    // Show a reminder every 30 seconds
+    setInterval(function () {
+        alert("Please, use me...");
+    }, 30000);
+
 });
 
-// Show a reminder every 30 seconds.
-setInterval(function () {
-    alert("Please, use me...");
-}, 30000);

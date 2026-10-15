@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover My Fault (Culpa Mía), the first chapter of Noah and Nick's story.">
+  <title>My Fault | One Love, Three Chapters</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .mf-page {
+      background: var(--bg, #17110f);
+      color: var(--text, #f5eee5);
+      min-height: 100vh;
+      font-family: var(--sans, "DM Sans", Arial, sans-serif);
+    }
+
+    .mf-hero {
+      min-height: 80vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(23,17,15,.97) 0%, rgba(23,17,15,.78) 48%, rgba(23,17,15,.16) 100%),
+        linear-gradient(0deg, rgba(23,17,15,.8), transparent 45%),
+        url("images/my-fault/poster/poster1.jpg") center 30% / cover no-repeat;
+    }
+
+    .mf-hero-content {
+      width: min(720px, 86%);
+      margin: 0 auto;
+      padding: 100px 0;
+    }
+
+    .mf-eyebrow {
+      color: var(--accent-light, #dfaaa0);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .mf-hero h1 {
+      font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+      font-size: clamp(4rem, 10vw, 8rem);
+      line-height: .9;
+      margin: 22px 0;
+      font-weight: 500;
+    }
+
+    .mf-hero h1 span {
+      display: block;
+      font-size: .42em;
+      letter-spacing: 7px;
+      margin-top: 22px;
+    }
+
+    .mf-description {
+      max-width: 540px;
+      color: var(--muted, #b8a69b);
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .mf-button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 25px;
+      border: 1px solid var(--accent, #b97870);
+      background: var(--accent, #b97870);
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: .75rem;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .mf-button:hover {
+      background: transparent;
+      color: var(--text, #f5eee5);
+    }
+
+    .mf-section {
+      padding: 85px 7%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .mf-kicker {
+      color: var(--accent, #b97870);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .72rem;
+      font-weight: 700;
+    }
+
+    .mf-heading {
+      font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 500;
+      margin: 12px 0 25px;
+    }
+
+    .mf-story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .mf-story-text {
+      color: var(--muted, #b8a69b);
+      line-height: 2;
+      font-size: .98rem;
+    }
+
+    .mf-story-image {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+      border-radius: 3px;
+    }
+
+    .mf-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .mf-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      background: var(--card, #261b18);
+    }
+
+    .mf-gallery img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .mf-gallery figure:hover img {
+      transform: scale(1.045);
+    }
+
+    .mf-video-wrap {
+      background: var(--bg-soft, #211714);
+      text-align: center;
+      padding: 75px 7%;
+    }
+
+    .mf-video {
+      width: min(100%, 1000px);
+      max-height: 600px;
+      display: block;
+      margin: 30px auto 0;
+      background: #000;
+      border-radius: 4px;
+    }
+
+    .mf-video-note {
+      color: var(--muted, #b8a69b);
+      font-size: .85rem;
+      margin-top: 15px;
+    }
+
+    .mf-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 30px 7%;
+      border-top: 1px solid var(--line, rgba(245,238,229,.15));
+    }
+
+    .mf-navigation a {
+      color: var(--accent-light, #dfaaa0);
+      text-decoration: none;
+    }
+
+    .mf-navigation a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      .mf-hero {
+        min-height: 75vh;
+        background-position: 58% center;
+      }
+
+      .mf-hero-content {
+        padding: 80px 0;
+      }
+
+      .mf-story-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .mf-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .mf-gallery img {
+        height: 230px;
+      }
+
+      .mf-section {
+        padding: 60px 6%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .mf-gallery img {
+        height: 185px;
+      }
+
+      .mf-hero h1 {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="mf-page">
+
+    <section class="mf-hero">
+      <div class="mf-hero-content">
+        <p class="mf-eyebrow">Chapter One · The Beginning</p>
+        <h1>My Fault <span>CULPA MÍA</span></h1>
+        <p class="mf-description">
+          One unexpected move. One forbidden attraction.
+          A love story that neither of them planned.
+        </p>
+        <a class="mf-button" href="#story">Discover Their Story</a>
+      </div>
+    </section>
+
+    <section class="mf-section" id="story">
+      <div class="mf-story-grid">
+        <div>
+          <p class="mf-kicker">The Storyline</p>
+          <h2 class="mf-heading">A Love That Breaks Every Rule</h2>
+
+          <p class="mf-story-text">
+            Noah's life changes when she moves away from her familiar world
+            to live with her mother and her mother's wealthy new husband.
+            There she meets Nick, her new stepbrother, whose confident
+            personality and rebellious lifestyle seem completely different
+            from her own.
+          </p>
+
+          <p class="mf-story-text">
+            At first, they clash. But as they spend more time together,
+            their rivalry turns into an attraction neither can easily
+            ignore. Nick introduces Noah to a world of underground racing,
+            unexpected friendships and dangerous situations, while Noah
+            discovers that there is much more to him than meets the eye.
+          </p>
+
+          <p class="mf-story-text">
+            As secrets from their past begin to surface, Noah and Nick
+            must confront their feelings and the consequences of choosing
+            a relationship that challenges the rules around them.
+          </p>
+
+          <p class="mf-video-note">
+            A romantic drama filled with tension, secrets, racing and
+            unexpected turns.
+          </p>
+        </div>
+
+        <div>
+          <img
+            class="mf-story-image"
+            src="images/my-fault/scenes/couple1.jpg"
+            alt="Noah and Nick in My Fault"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="mf-section" id="gallery">
+      <p class="mf-kicker">Moments From The Film</p>
+      <h2 class="mf-heading">Behind Every Look, A Story</h2>
+
+      <div class="mf-gallery">
+        <figure>
+          <img src="images/my-fault/scenes/romance1.jpg"
+               alt="Romantic moment from My Fault" loading="lazy">
+        </figure>
+        <figure>
+          <img src="images/my-fault/scenes/action1.jpg"
+               alt="Action moment from My Fault" loading="lazy">
+        </figure>
+        <figure>
+          <img src="images/my-fault/scenes/scene1.jpg"
+               alt="Scene from My Fault" loading="lazy">
+        </figure>
+        <figure>
+          <img src="images/my-fault/scenes/couple1.jpg"
+               alt="Noah and Nick together" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="mf-video-wrap" id="video">
+      <p class="mf-kicker">The Action</p>
+      <h2 class="mf-heading">The Most Intense Moments</h2>
+      <p class="mf-description" style="margin: 0 auto;">
+        Step into the adrenaline, conflict and danger of Noah and Nick's world.
+      </p>
+
+      <video class="mf-video" controls preload="metadata"
+             poster="images/my-fault/scenes/action1.jpg">
+        <source src="videos/Video1.mp4" type="video/mp4">
+        Your browser does not support MP4 video.
+      </video>
+
+      <p class="mf-video-note">
+        Press play to watch the video.
+      </p>
+    </section>
+
+    <footer class="mf-navigation">
+      <a href="index.html">← Back to the Trilogy</a>
+      <span>MY FAULT · CULPA MÍA</span>
+      <a href="your-fault.html">Continue to Your Fault →</a>
+    </footer>
+
+  </main>
+</body>
+</html>

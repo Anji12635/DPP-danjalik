@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Discover Our Fault (Culpa Nuestra), the final chapter of Noah and Nick's story.">
+
+  <title>Our Fault | One Love, Three Chapters</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .of-page {
+      background: var(--bg, #17110f);
+      color: var(--text, #f5eee5);
+      min-height: 100vh;
+      font-family: var(--sans, "DM Sans", Arial, sans-serif);
+    }
+
+    .of-hero {
+      min-height: 80vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(23,17,15,.97) 0%,
+          rgba(23,17,15,.78) 48%,
+          rgba(23,17,15,.16) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(23,17,15,.8),
+          transparent 45%
+        ),
+        url("images/our-fault/poster/poster2.jpeg")
+        center 30% / cover no-repeat;
+    }
+
+    .of-hero-content {
+      width: min(720px, 86%);
+      margin: 0 auto;
+      padding: 100px 0;
+    }
+
+    .of-eyebrow {
+      color: var(--accent-light, #dfaaa0);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .of-hero h1 {
+      font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+      font-size: clamp(4rem, 10vw, 8rem);
+      line-height: .9;
+      margin: 22px 0;
+      font-weight: 500;
+    }
+
+    .of-hero h1 span {
+      display: block;
+      font-size: .42em;
+      letter-spacing: 7px;
+      margin-top: 22px;
+    }
+
+    .of-description {
+      max-width: 540px;
+      color: var(--muted, #b8a69b);
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .of-button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 25px;
+      border: 1px solid var(--accent, #b97870);
+      background: var(--accent, #b97870);
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: .75rem;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .of-button:hover {
+      background: transparent;
+      color: var(--text, #f5eee5);
+    }
+
+    .of-section {
+      padding: 85px 7%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .of-kicker {
+      color: var(--accent, #b97870);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .72rem;
+      font-weight: 700;
+    }
+
+    .of-heading {
+      font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 500;
+      margin: 12px 0 25px;
+    }
+
+    .of-story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .of-story-text {
+      color: var(--muted, #b8a69b);
+      line-height: 2;
+      font-size: .98rem;
+    }
+
+    .of-story-image {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+      border-radius: 3px;
+    }
+
+    .of-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .of-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      background: var(--card, #261b18);
+    }
+
+    .of-gallery img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .of-gallery figure:hover img {
+      transform: scale(1.045);
+    }
+
+    .of-video-wrap {
+      background: var(--bg-soft, #211714);
+      text-align: center;
+      padding: 75px 7%;
+    }
+
+    .of-video {
+      width: min(100%, 1000px);
+      max-height: 600px;
+      display: block;
+      margin: 30px auto 0;
+      background: #000;
+      border-radius: 4px;
+    }
+
+    .of-video-note {
+      color: var(--muted, #b8a69b);
+      font-size: .85rem;
+      margin-top: 15px;
+    }
+
+    .of-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 30px 7%;
+      border-top: 1px solid var(--line, rgba(245,238,229,.15));
+    }
+
+    .of-navigation a {
+      color: var(--accent-light, #dfaaa0);
+      text-decoration: none;
+    }
+
+    .of-navigation a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      .of-hero {
+        min-height: 75vh;
+        background-position: 58% center;
+      }
+
+      .of-hero-content {
+        padding: 80px 0;
+      }
+
+      .of-story-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .of-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .of-gallery img {
+        height: 230px;
+      }
+
+      .of-section {
+        padding: 60px 6%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .of-gallery img {
+        height: 185px;
+      }
+
+      .of-hero h1 {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="of-page">
+
+    <!-- HERO -->
+
+    <section class="of-hero">
+      <div class="of-hero-content">
+
+        <p class="of-eyebrow">
+          Chapter Three · The Final Chapter
+        </p>
+
+        <h1>
+          Our Fault
+          <span>CULPA NUESTRA</span>
+        </h1>
+
+        <p class="of-description">
+          Some love stories are tested by time, distance and the choices
+          we make. Noah and Nick face the consequences of their past
+          as they discover whether their connection can survive
+          everything that stands between them.
+        </p>
+
+        <a class="of-button" href="#story">
+          Discover Their Story
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- STORYLINE -->
+
+    <section class="of-section" id="story">
+
+      <div class="of-story-grid">
+
+        <div>
+
+          <p class="of-kicker">The Storyline</p>
+
+          <h2 class="of-heading">
+            Is Love Enough?
+          </h2>
+
+          <p class="of-story-text">
+            Our Fault brings Noah and Nick's story to its final chapter.
+            After everything they have experienced, their relationship
+            faces new emotional challenges as the past continues to
+            influence their present.
+          </p>
+
+          <p class="of-story-text">
+            Time has changed them, and the choices they once made still
+            have consequences. As they encounter new circumstances,
+            they must confront unresolved feelings, difficult truths
+            and the uncertainty of what their future might hold.
+          </p>
+
+          <p class="of-story-text">
+            Their journey asks whether two people who have been through
+            so much can find their way back to each other, learn from
+            their mistakes and decide what love means to them now.
+          </p>
+
+          <p class="of-video-note">
+            A romantic drama about second chances, forgiveness,
+            personal growth and the power of love.
+          </p>
+
+        </div>
+
+        <div>
+
+          <img
+            class="of-story-image"
+            src="images/our-fault/scenes/couple3.jpg"
+            alt="Nick and Noah in Our Fault"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="of-section" id="gallery">
+
+      <p class="of-kicker">Moments From the Film</p>
+
+      <h2 class="of-heading">
+        Every Ending Holds a Story
+      </h2>
+
+      <div class="of-gallery">
+
+        <figure>
+          <img
+            src="images/our-fault/scenes/romatic3.jpg"
+            alt="Romantic moment from Our Fault"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/our-fault/scenes/fight.jpg"
+            alt="Action scene from Our Fault"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/our-fault/scenes/scene3.jpg"
+            alt="A scene from Our Fault"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/our-fault/scenes/couple3.jpg"
+            alt="Noah and Nick together in Our Fault"
+            loading="lazy"
+          >
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section class="of-video-wrap" id="video">
+
+      <p class="of-kicker">The Final Chapter</p>
+
+      <h2 class="of-heading">
+        One Last Journey
+      </h2>
+
+      <p class="of-description" style="margin: 0 auto;">
+        Return to Noah and Nick's world for the final chapter
+        of their unforgettable story.
+      </p>
+
+      <video
+        class="of-video"
+        controls
+        preload="metadata"
+        playsinline
+        poster="images/our-fault/poster/poster2.jpeg"
+      >
+        <source src="videos/Video3.mp4" type="video/mp4">
+        Your browser does not support MP4 video.
+      </video>
+
+      <p class="of-video-note">
+        Press play to watch the video.
+      </p>
+
+    </section>
+
+
+    <!-- PAGE NAVIGATION -->
+
+    <footer class="of-navigation">
+
+      <a href="your-fault.html">
+        ← Back to Your Fault
+      </a>
+
+      <span>OUR FAULT · CULPA NUESTRA</span>
+
+      <a href="index.html#movies">
+        Back to the Trilogy →
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>

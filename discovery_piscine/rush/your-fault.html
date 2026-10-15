@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Discover Your Fault (Culpa Tuya), the second chapter of Noah and Nick's story.">
+
+  <title>Your Fault | One Love, Three Chapters</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .yf-page {
+      background: var(--bg, #17110f);
+      color: var(--text, #f5eee5);
+      min-height: 100vh;
+      font-family: var(--sans, "DM Sans", Arial, sans-serif);
+    }
+
+    .yf-hero {
+      min-height: 80vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(23,17,15,.97) 0%,
+          rgba(23,17,15,.78) 48%,
+          rgba(23,17,15,.16) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(23,17,15,.8),
+          transparent 45%
+        ),
+        url("images/your-fault/poster/poster2.jpg")
+        center 30% / cover no-repeat;
+    }
+
+    .yf-hero-content {
+      width: min(720px, 86%);
+      margin: 0 auto;
+      padding: 100px 0;
+    }
+
+    .yf-eyebrow {
+      color: var(--accent-light, #dfaaa0);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .yf-hero h1 {
+      font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+      font-size: clamp(4rem, 10vw, 8rem);
+      line-height: .9;
+      margin: 22px 0;
+      font-weight: 500;
+    }
+
+    .yf-hero h1 span {
+      display: block;
+      font-size: .42em;
+      letter-spacing: 7px;
+      margin-top: 22px;
+    }
+
+    .yf-description {
+      max-width: 540px;
+      color: var(--muted, #b8a69b);
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .yf-button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 25px;
+      border: 1px solid var(--accent, #b97870);
+      background: var(--accent, #b97870);
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: .75rem;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .yf-button:hover {
+      background: transparent;
+      color: var(--text, #f5eee5);
+    }
+
+    .yf-section {
+      padding: 85px 7%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .yf-kicker {
+      color: var(--accent, #b97870);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .72rem;
+      font-weight: 700;
+    }
+
+    .yf-heading {
+      font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 500;
+      margin: 12px 0 25px;
+    }
+
+    .yf-story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .yf-story-text {
+      color: var(--muted, #b8a69b);
+      line-height: 2;
+      font-size: .98rem;
+    }
+
+    .yf-story-image {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+      border-radius: 3px;
+    }
+
+    .yf-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .yf-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      background: var(--card, #261b18);
+    }
+
+    .yf-gallery img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .yf-gallery figure:hover img {
+      transform: scale(1.045);
+    }
+
+    .yf-video-wrap {
+      background: var(--bg-soft, #211714);
+      text-align: center;
+      padding: 75px 7%;
+    }
+
+    .yf-video {
+      width: min(100%, 1000px);
+      max-height: 600px;
+      display: block;
+      margin: 30px auto 0;
+      background: #000;
+      border-radius: 4px;
+    }
+
+    .yf-video-note {
+      color: var(--muted, #b8a69b);
+      font-size: .85rem;
+      margin-top: 15px;
+    }
+
+    .yf-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 30px 7%;
+      border-top: 1px solid var(--line, rgba(245,238,229,.15));
+    }
+
+    .yf-navigation a {
+      color: var(--accent-light, #dfaaa0);
+      text-decoration: none;
+    }
+
+    .yf-navigation a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      .yf-hero {
+        min-height: 75vh;
+        background-position: 58% center;
+      }
+
+      .yf-hero-content {
+        padding: 80px 0;
+      }
+
+      .yf-story-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .yf-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .yf-gallery img {
+        height: 230px;
+      }
+
+      .yf-section {
+        padding: 60px 6%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .yf-gallery img {
+        height: 185px;
+      }
+
+      .yf-hero h1 {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="yf-page">
+
+    <!-- HERO -->
+
+    <section class="yf-hero">
+      <div class="yf-hero-content">
+
+        <p class="yf-eyebrow">
+          Chapter Two · The Challenge
+        </p>
+
+        <h1>
+          Your Fault
+          <span>CULPA TUYA</span>
+        </h1>
+
+        <p class="yf-description">
+          Their love survived the beginning. Now the real challenges
+          begin. As new responsibilities, old secrets and outside
+          pressures enter their lives, Noah and Nick must fight to
+          protect the relationship that means everything to them.
+        </p>
+
+        <a class="yf-button" href="#story">
+          Discover Their Story
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- STORYLINE -->
+
+    <section class="yf-section" id="story">
+
+      <div class="yf-story-grid">
+
+        <div>
+
+          <p class="yf-kicker">The Storyline</p>
+
+          <h2 class="yf-heading">
+            Love Is Put to the Test
+          </h2>
+
+          <p class="yf-story-text">
+            Noah and Nick return in the second chapter of their
+            complicated love story. What once felt exciting and
+            impossible to resist now faces the pressures of family,
+            changing priorities and the expectations surrounding
+            their future.
+          </p>
+
+          <p class="yf-story-text">
+            As Nick takes on new responsibilities and Noah begins
+            exploring her own independence, the distance between
+            them grows. Jealousy, misunderstandings and people from
+            their past make it increasingly difficult to keep their
+            relationship on solid ground.
+          </p>
+
+          <p class="yf-story-text">
+            They must decide whether their love can survive the
+            challenges ahead or whether the choices they make will
+            change their relationship forever.
+          </p>
+
+          <p class="yf-video-note">
+            A romantic drama about trust, independence, difficult
+            decisions and fighting for love.
+          </p>
+
+        </div>
+
+        <div>
+
+          <img
+            class="yf-story-image"
+            src="images/your-fault/scenes/couple2.jpg"
+            alt="Nick and Noah in Your Fault"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="yf-section" id="gallery">
+
+      <p class="yf-kicker">Moments From the Film</p>
+
+      <h2 class="yf-heading">
+        Behind Every Look, a Story
+      </h2>
+
+      <div class="yf-gallery">
+
+        <figure>
+          <img
+            src="images/your-fault/scenes/romance2.jpg"
+            alt="Romantic moment from Your Fault"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/your-fault/scenes/action.jpg"
+            alt="Action moment from Your Fault"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/your-fault/scenes/scene.jpg"
+            alt="Scene from Your Fault"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/your-fault/scenes/couple2.jpg"
+            alt="Noah and Nick together in Your Fault"
+            loading="lazy"
+          >
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section class="yf-video-wrap" id="video">
+
+      <p class="yf-kicker">The Challenge</p>
+
+      <h2 class="yf-heading">
+        The Story Continues
+      </h2>
+
+      <p class="yf-description" style="margin: 0 auto;">
+        Step into the romance, conflict and emotional moments
+        of Noah and Nick's next chapter.
+      </p>
+
+      <video
+        class="yf-video"
+        controls
+        preload="metadata"
+        playsinline
+        poster="images/your-fault/poster/poster2.jpg"
+      >
+        <source src="videos/Video2.mp4" type="video/mp4">
+        Your browser does not support MP4 video.
+      </video>
+
+      <p class="yf-video-note">
+        Press play to watch the video.
+      </p>
+
+    </section>
+
+
+<!-- PAGE NAVIGATION -->
+
+    <footer class="yf-navigation">
+
+        <a href="my-fault.html">
+        ← Back to My Fault
+        </a>
+
+         <span>YOUR FAULT · CULPA TUYA</span>
+
+        <a href="our-fault.html">
+         Continue to Our Fault →
+        </a>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>

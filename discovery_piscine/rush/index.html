@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <a class="brand" href="#home" aria-label="One Love, Three Chapters home">
       <span class="brand-mark">♡</span>
@@ -26,45 +29,81 @@
       <a href="#story">The Story</a>
       <a href="#cast">Cast</a>
       <a href="#gallery">Gallery</a>
+      <a href="#quiz">Fan Quiz</a>
       <a href="#fan-zone">Fan Zone</a>
-
-      <button class="theme-toggle" id="themeToggle" aria-label="Switch colour theme">☼</button>
+      <button class="theme-toggle" id="themeToggle"
+        aria-label="Switch colour theme">☼</button>
     </nav>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-image" aria-hidden="true"></div>
+
       <div class="hero-content">
         <p class="eyebrow">A STORY THAT STAYS WITH YOU</p>
+
         <h1>One Love.<br><em>Three Chapters.</em></h1>
+
         <p class="hero-description">
           Some stories are written in the stars. Others are written in fire,
           heartbreak, and the moments we never forget.
         </p>
+
         <div class="hero-actions">
-          <a class="button button-primary" href="#trilogy">Explore the trilogy <span>↗</span></a>
+          <a class="button button-primary" href="#trilogy">
+            Explore the trilogy <span>↗</span>
+          </a>
           <a class="text-link" href="#story">Discover the story ↓</a>
         </div>
+
         <p class="hero-note">INSPIRED BY THE CULPA MÍA TRILOGY</p>
       </div>
-      <div class="hero-caption"><span></span> A LOVE THAT CHANGES EVERYTHING</div>
+
+      <div class="hero-caption">
+        <span></span> A LOVE THAT CHANGES EVERYTHING
+      </div>
     </section>
 
-    <section class="intro section-pad">
-      <div class="intro-label"><span>01</span> THE UNFORGETTABLE</div>
+    <!-- INTRODUCTION -->
+    <section class="intro section-pad" id="intro">
+
+      <div class="intro-label">
+        <span>01</span> — THE STORY BEGINS
+      </div>
+
       <div class="intro-content">
-        <h2>Not just a love story.<br><em>A whole universe.</em></h2>
+        <p class="intro-eyebrow">ONE LOVE. THREE CHAPTERS.</p>
+
+        <h2>
+          An unexpected beginning.
+          <br>
+          <em>An unforgettable love.</em>
+        </h2>
+
         <p>
-          From the first spark to the hardest goodbye, follow a journey filled
-          with passion, complicated choices, and feelings that refuse to fade.
-          Three films. Countless emotions. One unforgettable story.
+          When Noah enters a new family, she finds herself drawn to Nick,
+          her complicated and rebellious stepbrother. What begins with
+          tension soon becomes a love neither of them can easily escape.
+          Through passion, jealousy, family secrets and heartbreaking
+          choices, their relationship is pushed to its limits across
+          My Fault, Your Fault and Our Fault.
         </p>
       </div>
-      <div class="intro-symbol">“</div>
+
+      <div class="intro-quote">
+        <span class="intro-quote-mark">“</span>
+        <p>Some stories stay with you long after the final scene.</p>
+        <span class="intro-quote-caption">THE CULPA MÍA UNIVERSE</span>
+      </div>
+
     </section>
 
+    <!-- THE TRILOGY -->
     <section class="trilogy section-pad" id="trilogy">
+
       <div class="section-heading">
         <div>
           <p class="eyebrow">THREE FILMS · ONE JOURNEY</p>
@@ -74,206 +113,651 @@
       </div>
 
       <div class="movie-grid">
+
         <article class="movie-card">
           <div class="movie-image">
-            <img src="images/chapter-one.jpg" alt="My Fault, the first chapter of the trilogy" width="700" height="1000">
+            <img
+              src="images/my-fault/poster/poster1.jpg"
+              alt="My Fault, the first chapter of the trilogy"
+              width="700"
+              height="1000"
+            >
             <span class="movie-number">CHAPTER 01</span>
           </div>
+
           <div class="movie-info">
             <p class="movie-kicker">THE BEGINNING</p>
             <h3>My Fault</h3>
-            <p>A new home, unexpected chemistry, and a connection that changes everything.</p>
-            <a href="#story" class="card-link">Discover the chapter <span>↗</span></a>
+            <p>
+              A new home, unexpected chemistry, and a connection
+              that changes everything.
+            </p>
+            <a href="my-fault.html" class="card-link">
+              Discover the chapter <span>↗</span>
+            </a>
           </div>
         </article>
 
         <article class="movie-card">
           <div class="movie-image">
-            <img src="images/chapter-two.jpg" alt="Your Fault, the second chapter of the trilogy" width="700" height="1000" loading="lazy">
+            <img
+              src="images/your-fault/poster/poster2.jpg"
+              alt="Your Fault, the second chapter of the trilogy"
+              width="700"
+              height="1000"
+              loading="lazy"
+            >
             <span class="movie-number">CHAPTER 02</span>
           </div>
+
           <div class="movie-info">
             <p class="movie-kicker">THE CHALLENGE</p>
             <h3>Your Fault</h3>
-            <p>Love is tested by distance, new pressures, and the weight of difficult decisions.</p>
-            <a href="#story" class="card-link">Discover the chapter <span>↗</span></a>
+            <p>
+              Love is tested by distance, new pressures, and the weight
+              of difficult decisions.
+            </p>
+            <a href="your-fault.html" class="card-link">
+              Discover the chapter <span>↗</span>
+            </a>
           </div>
         </article>
 
         <article class="movie-card">
           <div class="movie-image">
-            <img src="images/chapter-three.jpg" alt="Our Fault, the final chapter of the trilogy" width="700" height="1000" loading="lazy">
+            <img
+              src="images/our-fault/poster/poster2.jpeg"
+              alt="Our Fault, the final chapter of the trilogy"
+              width="700"
+              height="1000"
+              loading="lazy"
+            >
             <span class="movie-number">CHAPTER 03</span>
           </div>
+
           <div class="movie-info">
             <p class="movie-kicker">THE CONCLUSION</p>
             <h3>Our Fault</h3>
-            <p>Old memories and unfinished feelings meet the question of what comes next.</p>
-            <a href="#story" class="card-link">Discover the chapter <span>↗</span></a>
+            <p>
+              Old memories and unfinished feelings meet the question
+              of what comes next.
+            </p>
+            <a href="our-fault.html" class="card-link">
+              Discover the chapter <span>↗</span>
+            </a>
           </div>
         </article>
+
       </div>
     </section>
 
+    <!-- THE STORY -->
     <section class="story section-pad" id="story">
+
       <div class="story-photo">
-        <img src="images/couple-two.jpg" alt="A romantic moment from the existing fan photo collection" width="900" height="1100" loading="lazy">
-        <span class="photo-tag">THE MOMENTS BETWEEN</span>
+        <img
+          src="images/couple-eleven.jpg"
+          alt="Couple from the Culpa Mía fan photo collection"
+          loading="lazy"
+        >
       </div>
+
       <div class="story-copy">
-        <p class="eyebrow">02 / BEHIND THE FEELINGS</p>
-        <h2>Some connections<br>defy <em>every rule.</em></h2>
+
+        <p class="eyebrow">02 / THE STORY BEHIND THE SCREEN</p>
+
+        <h2>
+          From the page
+          <br>
+          to <em>the screen.</em>
+        </h2>
+
         <p>
-          What makes a story unforgettable isn't perfection. It's the tension
-          between what we want and what we fear, the mistakes we make, and
-          the courage it takes to choose what matters.
+          Every unforgettable film begins with a story. The Culpa Mía
+          universe began with Spanish author Mercedes Ron and her
+          bestselling Culpables book trilogy: Culpa Mía, Culpa Tuya
+          and Culpa Nuestra.
         </p>
+
         <p>
-          The trilogy brings together romance, conflict, and the complicated
-          process of growing up while trying to understand someone else.
+          At its heart is Noah, whose life changes when her mother
+          marries a wealthy man. She meets Nick, her new stepbrother,
+          and their clashing personalities give way to a complicated
+          romance. Across three chapters, love is challenged by family
+          secrets, jealousy, ambition, heartbreak and the difficult
+          choices that come with growing up.
         </p>
+
+        <div class="story-divider"></div>
+
+        <p class="eyebrow">THE BOOKS BECOME FILMS</p>
+
+        <p>
+          The popularity of Mercedes Ron's novels brought Noah and
+          Nick's story to the screen. Prime Video adapted the books
+          into a Spanish-language film trilogy, bringing the characters
+          and their world to life for audiences around the globe.
+          Director Domingo González helmed the original Spanish films,
+          with Nicole Wallace and Gabriel Guevara starring as Noah
+          and Nick.
+        </p>
+
+        <div class="story-facts">
+
+          <div class="story-fact">
+            <span class="story-fact-number">01</span>
+            <div>
+              <h3>The Author</h3>
+              <p>Mercedes Ron · Culpables novels</p>
+            </div>
+          </div>
+
+          <div class="story-fact">
+            <span class="story-fact-number">02</span>
+            <div>
+              <h3>The Director</h3>
+              <p>Domingo González · Original Spanish films</p>
+            </div>
+          </div>
+
+          <div class="story-fact">
+            <span class="story-fact-number">03</span>
+            <div>
+              <h3>The Trilogy</h3>
+              <p>My Fault · Your Fault · Our Fault</p>
+            </div>
+          </div>
+
+        </div>
+
         <div class="story-quote">
           <span>“</span>
-          <blockquote>Some chapters change your life. Some people become the story.</blockquote>
+          <blockquote>
+            Three books. Three films. One love story that refuses
+            to be forgotten.
+          </blockquote>
         </div>
-        <a class="button button-outline" href="#gallery">Enter the gallery <span>↗</span></a>
+
       </div>
+    </section>
 
+    <!-- CAST -->
+    <section class="cast-section" id="cast">
 
-</section>
-
-
-<section class="cast-section" id="cast">
-    <div class="cast-heading">
+      <div class="cast-heading">
         <p class="section-eyebrow">THE PEOPLE BEHIND THE STORY</p>
         <h2>Meet the <span>Cast</span></h2>
         <p>Discover the faces behind the love story.</p>
-    </div>
+      </div>
 
-    <div class="cast-grid">
+      <div class="cast-grid">
+
         <article class="cast-card">
-            <img src="images/nicole.jpg" alt="Nicole Wallace">
-            <div class="cast-info">
-                <p class="cast-character">NOAH MORÁN</p>
-                <a href="https://www.google.com/search?q=Nicole+Wallace+actress"
-                   target="_blank" rel="noopener noreferrer">Nicole Wallace ↗</a>
-            </div>
+          <img src="images/nicole.jpg" alt="Nicole Wallace" loading="lazy">
+          <div class="cast-info">
+            <p class="cast-character">NOAH MORÁN</p>
+            <a
+              href="https://www.google.com/search?q=Nicole+Wallace+actress"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Nicole Wallace ↗</a>
+          </div>
         </article>
 
         <article class="cast-card">
-            <img src="images/nick.jpg" alt="Gabriel Guevara">
-            <div class="cast-info">
-                <p class="cast-character">NICK LEISTER</p>
-                <a href="https://www.google.com/search?q=Gabriel+Guevara+actor"
-                   target="_blank" rel="noopener noreferrer">Gabriel Guevara ↗</a>
-            </div>
+          <img src="images/nick.jpg" alt="Gabriel Guevara" loading="lazy">
+          <div class="cast-info">
+            <p class="cast-character">NICK LEISTER</p>
+            <a
+              href="https://www.google.com/search?q=Gabriel+Guevara+actor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Gabriel Guevara ↗</a>
+          </div>
         </article>
 
         <article class="cast-card">
-            <img src="images/Eva.jpg" alt="Eva Ruiz">
-            <div class="cast-info">
-                <p class="cast-character">SUPPORTING CAST</p>
-                <a href="https://www.google.com/search?q=Eva+Ruiz+Culpa+Mia"
-                   target="_blank" rel="noopener noreferrer">Eva ↗</a>
-            </div>
+          <img src="images/Eva.jpg" alt="Eva Ruiz" loading="lazy">
+          <div class="cast-info">
+            <p class="cast-character">SUPPORTING CAST</p>
+            <a
+              href="https://www.google.com/search?q=Eva+Ruiz+Culpa+Mia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Eva ↗</a>
+          </div>
         </article>
 
         <article class="cast-card">
-            <img src="images/victor.jpg" alt="Víctor Varona">
-            <div class="cast-info">
-                <p class="cast-character">SUPPORTING CAST</p>
-                <a href="https://www.google.com/search?q=Victor+Culpa+Mia+actor"
-                   target="_blank" rel="noopener noreferrer">Víctor ↗</a>
-            </div>
+          <img src="images/victor.jpg" alt="Víctor Varona" loading="lazy">
+          <div class="cast-info">
+            <p class="cast-character">SUPPORTING CAST</p>
+            <a
+              href="https://www.google.com/search?q=Victor+Culpa+Mia+actor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Víctor ↗</a>
+          </div>
         </article>
-    </div>
-</section>
 
+      </div>
+    </section>
 
+    <!-- GALLERY -->
     <section class="gallery section-pad" id="gallery">
+
       <div class="section-heading">
         <div>
           <p class="eyebrow">03 / FROZEN IN TIME</p>
           <h2>The <em>Gallery</em></h2>
         </div>
-        <p>A collection of moments, moods,<br>and memories from your photos.</p>
+        <p>Every glance. Every moment.<br>Every memory worth keeping.</p>
       </div>
 
       <div class="gallery-grid">
-        <button class="gallery-item gallery-tall" data-full="images/couple-one.jpg" aria-label="View gallery photo one">
-          <img src="images/couple-one.jpg" alt="Gallery photograph one" width="700" height="900" loading="lazy">
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Some stories stay with us long after the last page.</p>
+          <span class="quote-label">ENDLESS MEMORIES</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-fourteen.jpg"
+          data-caption="One Last Memory"
+          aria-label="View photo 13">
+          <img src="images/couple-fourteen.jpg"
+            alt="One last unforgettable memory" loading="lazy">
+          <span>13 <b>VIEW PHOTO ↗</b></span>
+        </button>
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Some people are impossible to forget.</p>
+          <span class="quote-label">A MOMENT TO REMEMBER</span>
+        </div>
+
+        <button class="gallery-item gallery-tall"
+          data-full="images/couple-one.jpg"
+          data-caption="Frozen in Time"
+          aria-label="View photo 1">
+          <img src="images/couple-one.jpg" alt="Frozen in time" loading="lazy">
           <span>01 <b>VIEW PHOTO ↗</b></span>
         </button>
-        <button class="gallery-item" data-full="images/couple-three.jpg" aria-label="View gallery photo two">
-          <img src="images/couple-three.jpg" alt="Gallery photograph two" width="700" height="600" loading="lazy">
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>You were my favorite kind of trouble.</p>
+          <span class="quote-label">UNEXPECTED CHEMISTRY</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-three.jpg"
+          data-caption="A Beautiful Beginning"
+          aria-label="View photo 2">
+          <img src="images/couple-three.jpg"
+            alt="A beautiful beginning" loading="lazy">
           <span>02 <b>VIEW PHOTO ↗</b></span>
         </button>
-        <button class="gallery-item" data-full="images/couple-four.jpg" aria-label="View gallery photo three">
-          <img src="images/couple-four.jpg" alt="Gallery photograph three" width="700" height="600" loading="lazy">
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Not every feeling needs an explanation.</p>
+          <span class="quote-label">UNSPOKEN</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-four.jpg"
+          data-caption="Unspoken Feelings"
+          aria-label="View photo 3">
+          <img src="images/couple-four.jpg"
+            alt="Unspoken feelings" loading="lazy">
           <span>03 <b>VIEW PHOTO ↗</b></span>
         </button>
-        <button class="gallery-item" data-full="images/couple-five.jpg" aria-label="View gallery photo four">
-          <img src="images/couple-five.jpg" alt="Gallery photograph four" width="700" height="600" loading="lazy">
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Maybe forever begins with one unforgettable moment.</p>
+          <span class="quote-label">TIMELESS</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-five.jpg"
+          data-caption="The Chemistry"
+          aria-label="View photo 4">
+          <img src="images/couple-five.jpg"
+            alt="The chemistry" loading="lazy">
           <span>04 <b>VIEW PHOTO ↗</b></span>
         </button>
-        <button class="gallery-item gallery-tall" data-full="images/couple-six.jpg" aria-label="View gallery photo five">
-          <img src="images/couple-six.jpg" alt="Gallery photograph five" width="700" height="900" loading="lazy">
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Some memories never learn how to fade.</p>
+          <span class="quote-label">AFTER HOURS</span>
+        </div>
+
+        <button class="gallery-item gallery-tall"
+          data-full="images/couple-six.jpg"
+          data-caption="A Moment to Remember"
+          aria-label="View photo 5">
+          <img src="images/couple-six.jpg"
+            alt="A moment to remember" loading="lazy">
           <span>05 <b>VIEW PHOTO ↗</b></span>
         </button>
-        <button class="gallery-item" data-full="images/couple-seven.jpg" aria-label="View gallery photo six">
-          <img src="images/couple-seven.jpg" alt="Gallery photograph six" width="700" height="600" loading="lazy">
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Perhaps the most beautiful stories are never simple.</p>
+          <span class="quote-label">THE STORY CONTINUES</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-seven.jpg"
+          data-caption="Closer Than Ever"
+          aria-label="View photo 6">
+          <img src="images/couple-seven.jpg"
+            alt="Closer than ever" loading="lazy">
           <span>06 <b>VIEW PHOTO ↗</b></span>
         </button>
-      </div>
-      <p class="gallery-hint">SELECT A PHOTO TO VIEW IT IN FULL SIZE</p>
-    </section>
 
-    <section class="fan-zone section-pad" id="fan-zone">
-      <div class="fan-heading">
-        <p class="eyebrow">04 / YOUR TURN</p>
-        <h2>How well do you know<br><em>the trilogy?</em></h2>
-        <p>Time to find out if you're a casual viewer or a true fan.</p>
-      </div>
-
-      <div class="quiz-card">
-        <div class="quiz-top"><span>THE FAN QUIZ</span><span id="quizProgress">QUESTION 01 / 03</span></div>
-        <div class="quiz-progress"><span id="progressBar"></span></div>
-        <h3 id="questionText">Which film begins the trilogy?</h3>
-        <div class="quiz-options" id="quizOptions">
-          <button class="quiz-option" data-answer="0">Your Fault</button>
-          <button class="quiz-option" data-answer="1">My Fault</button>
-          <button class="quiz-option" data-answer="2">Our Fault</button>
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>It's the little moments that stay forever.</p>
+          <span class="quote-label">LITTLE THINGS</span>
         </div>
-        <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
-        <button id="nextQuestion" class="button button-primary quiz-next" disabled>Next question →</button>
+
+        <button class="gallery-item"
+          data-full="images/couple-eight.jpg"
+          data-caption="A Moment Together"
+          aria-label="View photo 7">
+          <img src="images/couple-eight.jpg"
+            alt="A moment together" loading="lazy">
+          <span>07 <b>VIEW PHOTO ↗</b></span>
+        </button>
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Some connections cannot be explained.</p>
+          <span class="quote-label">CHEMISTRY</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-nine.jpg"
+          data-caption="Unforgettable Memories"
+          aria-label="View photo 8">
+          <img src="images/couple-nine.jpg"
+            alt="Unforgettable memories" loading="lazy">
+          <span>08 <b>VIEW PHOTO ↗</b></span>
+        </button>
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Some moments deserve to last a lifetime.</p>
+          <span class="quote-label">FOREVER</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-ten.jpg"
+          data-caption="The Chemistry"
+          aria-label="View photo 9">
+          <img src="images/couple-ten.jpg"
+            alt="The chemistry" loading="lazy">
+          <span>09 <b>VIEW PHOTO ↗</b></span>
+        </button>
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Some memories feel like yesterday.</p>
+          <span class="quote-label">NOSTALGIA</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-eleven.jpg"
+          data-caption="Forever Remembered"
+          aria-label="View photo 10">
+          <img src="images/couple-eleven.jpg"
+            alt="Forever remembered" loading="lazy">
+          <span>10 <b>VIEW PHOTO ↗</b></span>
+        </button>
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>The best stories leave a little piece of themselves with us.</p>
+          <span class="quote-label">AFTER THE END</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-twelve.jpg"
+          data-caption="A Moment Together"
+          aria-label="View photo 11">
+          <img src="images/couple-twelve.jpg"
+            alt="A moment together" loading="lazy">
+          <span>11 <b>VIEW PHOTO ↗</b></span>
+        </button>
+
+        <div class="gallery-quote">
+          <span class="quote-mark">“</span>
+          <p>Some stories become a part of who we are.</p>
+          <span class="quote-label">THE MEMORIES REMAIN</span>
+        </div>
+
+        <button class="gallery-item"
+          data-full="images/couple-thirteen.jpg"
+          data-caption="Love Beyond Words"
+          aria-label="View photo 12">
+          <img src="images/couple-thirteen.jpg"
+            alt="Love beyond words" loading="lazy">
+          <span>12 <b>VIEW PHOTO ↗</b></span>
+        </button>
+
       </div>
+
     </section>
 
+
+<!-- FAN QUIZ -->
+<section class="fan-zone section-pad" id="quiz">
+
+  <div class="fan-heading">
+    <p class="eyebrow">04 / YOUR TURN</p>
+
+    <h2>
+      How well do you know<br>
+      <em>the trilogy?</em>
+    </h2>
+
+    <p>
+      Ten questions. Three films.
+      Are you a true Culpables fan?
+    </p>
+  </div>
+
+  <div class="quiz-card">
+
+    <div class="quiz-top">
+      <span>THE FAN QUIZ</span>
+      <span id="quizProgress">QUESTION 01 / 10</span>
+    </div>
+
+    <div class="quiz-progress">
+      <span id="progressBar"></span>
+    </div>
+
+    <h3 id="questionText">
+      Which film begins the trilogy?
+    </h3>
+
+    <div class="quiz-options" id="quizOptions">
+      <!-- JavaScript generates all four answer buttons here -->
+    </div>
+
+    <p
+      id="quizFeedback"
+      class="quiz-feedback"
+      aria-live="polite">
+    </p>
+
+    <button
+      type="button"
+      id="nextQuestion"
+      class="button button-primary quiz-next"
+      disabled>
+      Next question →
+    </button>
+
+  </div>
+
+</section>
+
+
+ 
+<!-- FAN COMMUNITY -->
+<section class="fan-community-section section-pad" id="fan-zone">
+
+  <div class="fan-zone-heading">
+    <p class="eyebrow">05 / THE FAN COMMUNITY</p>
+    <h2>Your stories.<br><em>Your moments.</em></h2>
+    <p class="fan-intro">
+      Met your idol? Achieved something amazing? Have a theory,
+      a memory, or exciting news? Share it with fans who understand.
+      Every fan has a story.
+    </p>
+  </div>
+
+  <div class="fan-layout">
+
+    <!-- SHARE A STORY -->
+    <div class="fan-compose">
+      <p class="eyebrow">YOUR MOMENT STARTS HERE</p>
+      <h3>Share your story</h3>
+
+      <form id="fanPostForm">
+
+        <label for="fanName">Your name or nickname</label>
+        <input
+          id="fanName"
+          name="fanName"
+          type="text"
+          maxlength="40"
+          placeholder="What should we call you?"
+          autocomplete="nickname"
+          required
+        >
+
+        <label for="fanCategory">What's your moment about?</label>
+        <select id="fanCategory" name="fanCategory" required>
+          <option value="Met my idol">✨ I met my idol</option>
+          <option value="Fan achievement">🏆 My achievement</option>
+          <option value="Unforgettable moment">💗 An unforgettable moment</option>
+          <option value="Fan theory">🎬 My theory or idea</option>
+          <option value="Fan appreciation">🫶 Fan appreciation</option>
+          <option value="Something exciting">🥂 Something exciting</option>
+        </select>
+
+        <label for="fanTitle">Story title</label>
+        <input
+          id="fanTitle"
+          name="fanTitle"
+          type="text"
+          maxlength="100"
+          placeholder="I still can't believe this happened..."
+          required
+        >
+
+        <label for="fanStory">Tell us about it</label>
+        <textarea
+          id="fanStory"
+          name="fanStory"
+          rows="5"
+          maxlength="1500"
+          placeholder="Share your experience, achievement, memory or idea..."
+          required
+        ></textarea>
+
+        <button type="submit" class="fan-submit">
+          Share with the community ↗
+        </button>
+
+      </form>
+    </div>
+
+    <!-- COMMUNITY FEED -->
+    <div class="fan-community">
+
+      <div class="fan-feed-heading">
+        <div>
+          <p class="eyebrow">FROM FANS, FOR FANS</p>
+          <h3>Latest stories</h3>
+        </div>
+        <span class="fan-live-mark">COMMUNITY</span>
+      </div>
+
+      <div id="fanPosts" aria-live="polite">
+        <div class="fan-empty">
+          <span class="fan-empty-icon">♡</span>
+          <h4>Every story starts somewhere.</h4>
+          <p>
+            Be the first to share a moment and start a conversation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- CLOSING -->
     <section class="closing section-pad">
       <p class="eyebrow">EVERY LOVE STORY LEAVES SOMETHING BEHIND</p>
       <h2>Which chapter<br>stole <em>your heart?</em></h2>
-      <a class="button button-primary" href="#trilogy">Revisit the trilogy <span>↗</span></a>
+
+      <a class="button button-primary" href="#trilogy">
+        Revisit the trilogy <span>↗</span>
+      </a>
+
       <div class="closing-decoration">♡</div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
+
     <a class="brand footer-brand" href="#home">
       <span class="brand-mark">♡</span>
       <span>ONE LOVE <small>THREE CHAPTERS</small></span>
     </a>
+
     <p>A fan-made tribute inspired by the Culpa Mía trilogy.</p>
+
     <a href="#home" class="back-top">BACK TO TOP ↑</a>
-    <p class="copyright">Unofficial fan project. All film titles and related rights belong to their respective owners.</p>
+
+    <p class="copyright">
+      Unofficial fan project. All film titles and related rights belong
+      to their respective owners.
+    </p>
+
   </footer>
 
+  <!-- GALLERY LIGHTBOX -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">×</button>
-    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
-    <img id="lightboxImage" src="images/couple-one.jpg" alt="Expanded gallery photograph">
-    <button class="lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+    <button class="lightbox-close" id="lightboxClose"
+      aria-label="Close image viewer">×</button>
+
+    <button class="lightbox-prev" id="lightboxPrev"
+      aria-label="Previous image">‹</button>
+
+    <img id="lightboxImage"
+      src="images/couple-one.jpg"
+      alt="Expanded gallery photograph">
+
+    <button class="lightbox-next" id="lightboxNext"
+      aria-label="Next image">›</button>
+
     <p id="lightboxCounter">01 / 06</p>
   </div>
+
 </body>
 </html>
-
